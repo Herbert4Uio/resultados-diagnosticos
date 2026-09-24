@@ -15,7 +15,7 @@ export default function LoginPage() {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
-    
+
     const res = await signIn("credentials", {
       redirect: false,
       username,
@@ -48,7 +48,7 @@ export default function LoginPage() {
                 id="username"
                 type="text"
                 required
-                placeholder="Usuario (admin)"
+                placeholder="Usuario"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 className="bg-zinc-800 border-zinc-700 text-zinc-100 placeholder:text-zinc-500"
@@ -59,7 +59,7 @@ export default function LoginPage() {
                 id="password"
                 type="password"
                 required
-                placeholder="Contraseña (admin123)"
+                placeholder="Contraseña"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="bg-zinc-800 border-zinc-700 text-zinc-100 placeholder:text-zinc-500"
